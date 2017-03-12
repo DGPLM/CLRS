@@ -1,0 +1,8 @@
+C:\Users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\bin\Release\Test.exe.config
+C:\Users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\bin\Release\Test.exe
+C:\Users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\bin\Release\Test.pdb
+C:\Users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\bin\Release\IntroductionToAlgorithms.dll
+C:\Users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\bin\Release\IntroductionToAlgorithms.pdb
+C:\Users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\obj\Release\Test.csprojResolveAssemblyReference.cache
+C:\Users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\obj\Release\Test.exe
+C:\Users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\obj\Release\Test.pdb

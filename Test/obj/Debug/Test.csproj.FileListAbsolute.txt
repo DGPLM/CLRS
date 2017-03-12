@@ -1,0 +1,16 @@
+c:\users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\bin\Debug\Test.exe.config
+c:\users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\bin\Debug\Test.exe
+c:\users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\bin\Debug\Test.pdb
+c:\users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\bin\Debug\IntroductionToAlgorithms.dll
+c:\users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\bin\Debug\IntroductionToAlgorithms.pdb
+c:\users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+c:\users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\obj\Debug\Test.exe
+c:\users\gtcjm\documents\visual studio 2015\Projects\IntroductionToAlgorithms\Test\obj\Debug\Test.pdb
+C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\Test.exe.config
+C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\obj\Debug\Test.exe
+C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\obj\Debug\Test.pdb
+C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\Test.exe
+C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\Test.pdb
+C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\IntroductionToAlgorithms.dll
+C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\IntroductionToAlgorithms.pdb
