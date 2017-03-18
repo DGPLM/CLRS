@@ -92,26 +92,26 @@ namespace IntroductionToAlgorithms
                     Console.WriteLine(root.Value);
                 }
             }
-            public void Tree_Insert(TNode<T> node)
-            {
-                TNode<T> temp = this.Root;
-                TNode<T> temp1 = null;
-                while (temp != null)
-                {
-                    temp1 = temp;
-                    if (node.Value < temp1.Value)
-                    {
+            //public void Tree_Insert(TNode<T> node)
+            //{
+            //    TNode<T> temp = this.Root;
+            //    TNode<T> temp1 = null;
+            //    while (temp != null)
+            //    {
+            //        temp1 = temp;
+            //        if (node.Value < temp1.Value)
+            //        {
 
-                    }
-                }
-            }
-            public static bool operator < (TNode<T> node1,TNode<T> node2)
-            {
-                if (node1.Equals(node2))
-                {
-                    Equals()
-                }
-            } 
+            //        }
+            //    }
+            //}
+            //public static bool operator < (TNode<T> node1,TNode<T> node2)
+            //{
+            //    if (node1.Equals(node2))
+            //    {
+            //        Equals()
+            //    }
+            //} 
                 
         }
         #endregion

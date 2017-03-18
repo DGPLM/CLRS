@@ -23,7 +23,7 @@ namespace IntroductionToAlgorithms
             this.Top = -1;
             this.Length = 0;
             Stack_Value = new T[length];
-            this.Length = Stack_Value.Length;
+           
         }
         public bool Stack_Empty()
         {
@@ -38,32 +38,37 @@ namespace IntroductionToAlgorithms
         }
         public T Pop()
         {
-            if (this.Top == -1)
+            if (Stack_Empty())
             {
-                Console.WriteLine("There is no element in the stack");
+                Console.WriteLine("The Stack is Empty!");
                 return default(T);
             }
             else
             {
-                this.Top--;
-                return this.Stack_Value[Top + 1];
+                
+                T result = Stack_Value[this.Top];
+                Top--;
+                this.Length--;
+                return result;
+
             }
         }
         public void Push(T value)
         {
-            this.Top++;
-            if (this.Top == this.Length)
+            if (this.Length == this.Stack_Value.Length)
             {
-                Console.WriteLine("Stack OverFlow");
+                Console.WriteLine("The Stack is Full");
             }
             else
             {
-                this.Stack_Value[this.Top] = value;
+                this.Top++;
+                Stack_Value[this.Top] = value;
+                this.Length++;
             }
         }
         public T Peek()
         {
-            if (this.Top != -1)
+            if (!Stack_Empty())
             {
                 return this.Stack_Value[this.Top];
 
@@ -75,6 +80,7 @@ namespace IntroductionToAlgorithms
         }
     }
     //利用List存储数据
+    //存在List自动扩容情况。。。
     public class Stackk<T> where T : struct
     {
 

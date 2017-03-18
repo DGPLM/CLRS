@@ -11,3 +11,5 @@ C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorit
 G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\IntroductionToAlgorithms\obj\Debug\IntroductionToAlgorithms.csprojResolveAssemblyReference.cache
 G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\IntroductionToAlgorithms\obj\Debug\IntroductionToAlgorithms.dll
 G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\IntroductionToAlgorithms\obj\Debug\IntroductionToAlgorithms.pdb
+G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\IntroductionToAlgorithms\bin\Debug\IntroductionToAlgorithms.dll
+G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\IntroductionToAlgorithms\bin\Debug\IntroductionToAlgorithms.pdb

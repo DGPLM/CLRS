@@ -14,3 +14,11 @@ C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorit
 C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\Test.pdb
 C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\IntroductionToAlgorithms.dll
 C:\Users\陈大蒜\Documents\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\IntroductionToAlgorithms.pdb
+G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\Test.exe.config
+G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\Test.exe
+G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\Test.pdb
+G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\IntroductionToAlgorithms.dll
+G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\bin\Debug\IntroductionToAlgorithms.pdb
+G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\obj\Debug\Test.exe
+G:\文档\Visual Studio 2015\Projects\p\IntroductionToAlgorithms\Test\obj\Debug\Test.pdb
