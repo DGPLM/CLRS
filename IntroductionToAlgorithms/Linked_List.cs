@@ -42,6 +42,8 @@ namespace IntroductionToAlgorithms
 
         public void HeadInsert(LNode<T> data)
         {
+            data.Prev = null; data.Next = null;
+
             if (this.Count == 0)
             {
                 this.Head = data;
@@ -50,14 +52,15 @@ namespace IntroductionToAlgorithms
             }
             else
             {
-                data.Next = this.Head.Next;
-                this.Head.Next.Prev = data;
+                data.Next = this.Head;
+                this.Head.Prev = data;
                 this.Head = data;
                 this.Count++;
             }
         }
         public void TailInsert(LNode<T> data)
         {
+            data.Prev = null;data.Next = null;
             if (this.Count == 0)
             {
                 this.Head = data;
@@ -66,8 +69,8 @@ namespace IntroductionToAlgorithms
             }
             else
             {
-                data.Prev = this.Tail.Prev;
-                this.Tail.Prev.Next = data;
+                data.Prev = this.Tail;
+                this.Tail.Next = data;
                 this.Tail = data;
                 this.Count++;
             }
@@ -124,6 +127,22 @@ namespace IntroductionToAlgorithms
                 temp = temp.Next;
             }
         }
-
+        public bool IsEmpty()
+        {
+            if (this.Head == null && this.Tail == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void Clear()
+        {
+            this.Head = null;
+            this.Tail = null;
+            this.Count = 0;
+        }
     }
 }

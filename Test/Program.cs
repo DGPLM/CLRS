@@ -120,22 +120,48 @@ namespace Test
             //    Console.WriteLine(stack.Pop());
 
             //}
-            IntroductionToAlgorithms.Stackk<int> stack = new IntroductionToAlgorithms.Stackk<int>(5);
-            for (int i = 0; i < 5; i++)
-            {
-                stack.Push(i + 1);
-            }
-            Console.WriteLine(stack.Peek());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Peek());
-            stack.Push(6);
-            stack.Push(7);
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine(stack.Pop());
 
-            }
+            //IntroductionToAlgorithms.Stackk<int> stack = new IntroductionToAlgorithms.Stackk<int>(5);
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    stack.Push(i + 1);
+            //}
+            //Console.WriteLine(stack.Peek());
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Peek());
+            //stack.Push(6);
+            //stack.Push(7);
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.WriteLine(stack.Pop());
+
+            //}
             #endregion
+            #region
+            Linked_List<string> list = new Linked_List<string>();
+            LNode<string> a1 = new LNode<string>("1");
+            LNode<string> a2 = new LNode<string>("2");
+            LNode<string> a3 = new LNode<string>("3");
+            LNode<string> a4 = new LNode<string>("4");
+            list.HeadInsert(a1);
+            list.HeadInsert(a2);
+            list.HeadInsert(a3);
+            list.HeadInsert(a4);
+            list.PrintList();
+            //Output:4 3 2 1
+            list.Clear();
+            list.TailInsert(a1);
+            list.TailInsert(a2);
+            list.TailInsert(a3);
+            list.TailInsert(a4);
+            list.PrintList();
+            //Output:1 2 3 4
+            list.Delete(a3);
+            list.PrintList();
+            //Output:1 2 4
+
+            #endregion
+
             Console.ReadKey();
         }
     }
