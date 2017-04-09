@@ -11,69 +11,81 @@ namespace IntroductionToAlgorithms
     /// 泛型树节点类
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class TNode<T>
+    public class TNode<T> where T : IComparable<T>
     {
-        //定义泛型数据
-        private T value;
-        public T Value
+
+       public TNode()
         {
-            get { return value; }
-            set { this.value = value; }
+            this.Parent = null;
+            this.Left = null;
+            this.Right = null;
+            this.Value = default(T);         
         }
+        public TNode(T root)
+        {
+            this.Parent = null;
+            this.Left = null;
+            this.Right = null;
+            this.Value = root;
+        }
+        
+
+        //定义泛型数据       
+        public T Value { get; set; }
+
         //泛型父节点
-        private TNode<T> parent;
-        public TNode<T> Parent
+        public TNode<T> Parent { get; set; }
+
+        //泛型左子节点
+        public TNode<T> Left { get; set; }
+
+        //泛型右子树节点        
+        public TNode<T> Right { get; set; }
+
+        public void DisplayValue()
         {
-            get { return parent; }
-            set { parent = value; }
+            Console.WriteLine(this.Value);
         }
-        //泛型左子树节点
-        private TNode<T> left;
-        public TNode<T> Left
-        {
-            get { return left; }
-            set { left = value; }
-        }
-        //泛型右子树节点
-        private TNode<T> right;
-        public TNode<T> Right
-        {
-            get { return right; }
-            set { right = value; }
-        }
+        
     }
-    public class Tree<T>
+    public class Tree<T> where T:IComparable<T>
     {
+        public Tree()
+        {
+            this.Count = 0;
+            this.Root = null;
+        }
+        public Tree(TNode<T> root)
+        {
+            this.Count++;
+            this.Root = root;
+        }
+       
+
         //定义树节点的总数,初始化为0
-        private int count;
-        public int Count
-        {
-            get { return count; }
-            set { count = value; }
-        }
+       public int Count { get; set; }
         //定义树的根节点,初始化为空
-        private TNode<T> root;
-        public TNode<T> Root
-        {
-            get { return root; }
-            set { root = value; }
-        }
+       public TNode<T> Root { get; set; }
+
+
+
         //定义树的中序遍历
         public void Inorder_Tree_Walk(TNode<T> root)
         {
             if (root != null)
             {
                 Inorder_Tree_Walk(root.Left);
-                Console.WriteLine(root.Value);
+                root.DisplayValue();
                 Inorder_Tree_Walk(root.Right);
             }
         }
+       
         //定义树的前序遍历
         public void Preorder_Tree_Walk(TNode<T> root)
         {
             if (root != null)
             {
-                Console.WriteLine(root.Value);
+               root.DisplayValue();
                 Preorder_Tree_Walk(root.Left);
                 Preorder_Tree_Walk(root.Right);
             }
@@ -85,29 +97,110 @@ namespace IntroductionToAlgorithms
             {
                 Postorder_Tree_Walk(root.Left);
                 Postorder_Tree_Walk(root.Right);
-                Console.WriteLine(root.Value);
+                root.DisplayValue();
             }
         }
-        //public void Tree_Insert(TNode<T> node)
-        //{
-        //    TNode<T> temp = this.Root;
-        //    TNode<T> temp1 = null;
-        //    while (temp != null)
-        //    {
-        //        temp1 = temp;
-        //        if (node.Value < temp1.Value)
-        //        {
 
-        //        }
-        //    }
-        //}
-        //public static bool operator < (TNode<T> node1,TNode<T> node2)
+        
+        
+
+        /// <summary>
+        /// 二叉树查找循环版本
+        /// </summary>
+        /// <param name="root">树节点</param>
+        /// <param name="value">查找的泛型值</param>
+        /// <returns>返回查到到的节点，没有返回空</returns>
+        public TNode<T> Tree_Search(TNode<T> root ,T value)
+        {
+            if (root == null)
+            {
+                Console.WriteLine("The tree is empty");
+                return null;
+            }
+            while(root.Value.CompareTo(value) != 0)
+            {
+                if (root.Value.CompareTo(value) >0)
+                {
+                    root = root.Left;
+                }
+                else
+                {
+                    root = root.Right;
+                }
+                if (root == null)
+                {
+                    Console.WriteLine("There is no such element exist.");
+                    return null;
+                }
+            }
+            return root;
+        }
+
+        /// <summary>
+        /// 二叉树查找迭代版本，无效，TODO List
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        //public TNode<T> Tree_Search(TNode<T> root, T value)
         //{
-        //    if (node1.Equals(node2))
-        //    {
-        //        Equals()
+        //    if (root == null || root.Value.CompareTo(value) == 0)
+        //    {            
+        //        return root;
         //    }
-        //} 
+        //    if (root.Value.CompareTo(value) > 0)
+        //    {
+        //        //大于根节点，往左节点迭代
+        //        Tree_Search(root.Left, value);
+        //    }
+        //    else
+        //    {
+        //        Tree_Search(root.Right, value);
+        //    }            
+        //}
+
+        public void Tree_Insert(TNode<T> node)
+        {
+            TNode<T> p = null;
+            TNode<T> temp = this.Root;
+            //find the insert location
+            while (temp != null)
+            {
+                p = temp;
+                if (temp.Value.CompareTo(node.Value) > 0)
+                {
+                    temp = temp.Left;
+                }
+                else
+                {
+                    temp = temp.Right;
+                }
+            }
+            //set the insert node's parent equal to p
+            node.Parent = p;
+            if (p == null)
+            {
+                //represent the tree is empty
+                this.Root = node;
+            }
+            else
+            {
+                if (p.Value.CompareTo(node.Value) >0)
+                {
+                    p.Left = node;
+                    this.Count++;
+                }
+                else
+                {
+                    p.Right = node;
+                    this.Count++;
+                }
+            }
+        }
+        public void Tree_Delete()
+        {
+
+        }
 
     }
 
