@@ -197,8 +197,131 @@ namespace IntroductionToAlgorithms
                 }
             }
         }
-        public void Tree_Delete()
+
+        /// <summary>
+        /// return the minimum node in tree.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public TNode<T> Tree_Minimum(TNode<T> root)
         {
+            if (root == null)
+            {
+                Console.WriteLine("The given node is empty.");
+                return null;
+            }
+            while (root.Left != null)
+            {
+                root = root.Left;
+            }
+            return root;
+        }
+        /// <summary>
+        /// return the maximum node in tree.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public TNode<T> Tree_Maximum(TNode<T> root)
+        {
+            if (root == null)
+            {
+                Console.WriteLine("The given node is empty.");
+                return null;
+            }
+            while (root.Right != null)
+            {
+                root = root.Right;
+            }
+            return root;
+        }
+
+        /// <summary>
+        /// return current node's successor node 
+        /// 返回当前节点的后续节点
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public TNode<T> Tree_Successor(TNode<T> node)
+        {
+            if (node.Right != null) //两种情况，第一种情况，右子树不为空，则查找右子树最小值
+            {
+                return Tree_Minimum(node.Right);
+            }
+            else //第二种情况，右子树为空，则查找到父结点且父结点的左节点为当前结点时跳出，此时父节点为后继结点
+            {
+                TNode<T> p = node.Parent;
+                while (p != null && node == p.Right)
+                {
+                    node = p;
+                    p = p.Parent;
+                }
+                return p;
+            }
+        }
+        /// <summary>
+        /// return
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public TNode<T> Tree_PreDecessor(TNode<T> node)
+        {
+            if (node.Left != null) //两种情况，第一种情况，左子树不为空，则查找左子树最大值
+            {
+                return Tree_Maximum(node.Left);
+            }
+            else //第二种情况，左子树为空，则查找到父结点且父结点的右结点为当前结点时跳出，此时父节点为前继结点
+            {
+                TNode<T> p = node.Parent;
+                while (p!= null && node == p.Left)
+                {
+                    node = p;
+                    p = p.Parent;
+                }
+                return p;
+            }
+        }
+        public TNode<T> Tree_Delete(TNode<T> node)
+        {
+            TNode<T> tempy = null;
+            TNode<T> tempx = null;
+            if (node.Left == null || node.Right == null) //第一个if，确定要删除的结点，是当前结点还是当前结点的后继结点
+            {
+                tempy = node;
+            }
+            else //第三种情况，结点含有两个子树，获取删除结点的后继结点
+            {
+                tempy = Tree_Successor(node);
+            }
+            if (tempy.Left != null) 
+            {
+                tempx = tempy.Left;
+            }
+            else
+            {
+                tempx = tempy.Right;
+            }
+            if (tempx != null)
+            {
+                tempx.Parent = tempy.Parent; //第一种情况，删除结点只含一个子树，将删除结点的子树与删除结点的父结点连接
+            }
+            if (tempy.Parent == null)
+            {
+                this.Root = node; 
+
+            }
+            else if (tempy == tempy.Parent.Left)
+            {
+                tempy.Parent.Left = tempx;
+            }
+            else if (tempy == tempy.Parent.Right)
+            {
+                tempy.Parent.Right = tempx;
+            }
+            if (tempy != node)
+            {
+                node.Value = tempy.Value;
+            }
+            return tempy;
 
         }
 
