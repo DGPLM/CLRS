@@ -18,7 +18,7 @@ namespace IntroductionToAlgorithms
         {
             int[] result = new int[array.Length];
             int key;//用来存放当前数值
-            int j;
+            int j; //用来指示当前数值最终放置位置
             result[0] = array[0];
             for (int i = 1; i < array.Length; i++)
             {
@@ -38,28 +38,28 @@ namespace IntroductionToAlgorithms
         /// 选择升序排序
         /// </summary>
         /// <param name="array"></param>
-        /// <returns></returns>
+        /// <returns></returns>       
         public static int[] SelectionSort(int[] array)
         {
-            int position = 0;//标记数组最小值下标
-            int min = array[0];//数组最小值，初始化为数组第一个数字
-            for (int i = 0; i < array.Length - 1; i++)//外层for循环用来确定当前选择最小值放置到哪个位置，因此只需要到length - 1
+            int position = 0; //用来指示当前最小值的下标
+            int temp = 0;
+            for (int i = 0; i < array.Length - 1; i++) //外层for循环用来确定当前选择最小值放置到哪个位置，因此只需要到length - 1
             {
-                for (int j = i; j < array.Length; j++)//内层for循环用来确定未排序部分数组的最小值，因此次数为length
+                position = i; //每次循环前更新为待搜索的第一个元素
+                for (int j = i+1; j < array.Length; j++)//内层for循环用来确定未排序部分数组的最小值，因此次数为length
                 {
-                    if (array[j] < min)
+                    if (array[j] < array[position])
                     {
-                        min = array[j];
-                        position = j;
+                        position = j;//每当有比当前值小的值，则更新最小值
                     }
                 }
-                array[position] = array[i];//更新已排序部分
-                array[i] = min;
-                position = i + 1;//更新最小值已经最小值坐标
-                min = array[position];
+                temp = array[position]; //交换两个元素位置
+                array[position] = array[i];
+                array[i] = temp;
             }
             return array;
         }
+     
         //public static int[] MergeSort(int[] array, int l, int r)
         //{
         //    int m = 0;

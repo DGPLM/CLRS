@@ -13,19 +13,34 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            int[] array = new int[] { 5, 2, 4, 6, 1, 3 };
-            int[] array11 = new int[] { 5, 13, 2, 2, 2, 25, 7, 17, 20, 8, 4 };
-            int[] arr = new int[] { 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+            int[] array11 = new int[] { 5, 13, 2, 2, 2, 25, 7, 17, 20, 8, 4,25,4 };
+            Console.WriteLine("Before:" + array11.Length);
+            foreach (var item in array11)
+            {
+                Console.Write(item);
+                Console.Write(" ");
+            }
+            // int[] array = new int[] { 5, 2, 4, 6, 1, 3 };
+            
+            //int[] arr = new int[] { 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 
             //int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
-            List<int> array1 = new List<int>() { 5, 2, 4, 6, 1, 3 };
+            //List<int> array1 = new List<int>() { 5, 2, 4, 6, 1, 3 };
             //////插入升序排序
             ////int[] result = IntroductionToAlgorithms.Sort.InsertSort(array);
             //int[] marray = new int[] { 4,2 };
             ////int[] result = IntroductionToAlgorithms.Sort.Merge(marray, 0, 0, 1);
-            ////选择升序排序
-            ////int[] result = IntroductionToAlgorithms.Sort.SelectionSort(array);
-
+            //选择升序排序
+            int[] result = IntroductionToAlgorithms.Sort.Select(array11);
+           
+            Console.WriteLine();
+            foreach (int item in result)
+            {                
+                Console.Write(item);
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("After:"+result.Length);
             //int[] result = IntroductionToAlgorithms.Sort.MergeSort(array, 0, 5);
             //foreach (int item in result)
             //{
